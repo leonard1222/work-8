@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav{
+            display: flex;
+            width:100%;
+            height:50px;
+            background-color:black;
+        }
+        .nav .sign{
+            float:left;
+        }
+        .nav1 ul{
+            list-style-type: none;
+        }
+        .nav1 ul li{
+            float:left;
+            padding:0px 20px;
+        }
+        .nav1 ul li a{
+            color:white;
+            text-decoration: none;
+        }
+        .nav1 ul li .ocolor{
+            color:orange;
+        }
+        .nav1 ul li .ocolor:hover{
+            color:red;
+        }
+        .nav1 ul li a:hover{
+            color:orange;
+        }
+        .nav2 ul{
+            list-style-type: none;
+        }
+        .nav2 ul li{
+            float:left;
+            padding:0px 20px;
+        }
+        .nav2 ul li a{
+            color:gray;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .nav2 ul li a div{
+            background:url(./images/8x7cejPCVRaEBEDHg7ezDs.png);
+            background-position: -230px 221px;
+            height:30px;
+            width:30px;
+            float:left;
+            transform: translate(13px,-9px);
+        }
+        .nav2 ul li a:hover{
+            color:orange;
+        }
+        .nav3 ul{
+            list-style-type: none;
+        }
+        .nav3 ul li{
+            float:left;
+            padding:0px 20px;
+        }
+        .nav3 ul li a{
+            color:white;
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .nav3 ul li a:hover{
+            color:orange;
+        }
+        .nav .search{
+            float:left;
+            margin:13px 0px 0px 50px;
+        }
+        .lyric h1{
+            transform: translate(300px,10px);
+            font-size:60px;
+        }
+        .lyric ul{
+            list-style-type: none;
+        }
+        .lyric ul .special{
+            color:black;
+        }
+        .lyric ul p{
+            color:gray;
+            float:left;
+            padding:0 20px
+        }
+        .lyric ul  li{
+            float:left;
+            padding:17px 20px;
+        }
+        .lyric ul  li a{
+            text-decoration: none;
+            color:orange;
+        }
+        .lyric ul  li a div{
+            background:url(./images/bbHRbrtQkXjFLRSChCcxPi.jpg);
+            background-repeat:no-repeat;
+            height:30px;
+            width:30px;
+            float:left;
+            transform:translate(5px,5px);
+        }
+        .lyric ul  li a:hover{
+            color:red;
+        }
+        .lyric ul li .special{
+            color:black;
+        }
+        .lyric ul li .special:hover{
+            color:red;
+        }
+        .annotation{
+            float:left;
+            transform: translate(-550px,50px);
+        }
+        .annotation p{
+            text-align: center;
+        }
+        .HR1{
+            width:700px;
+            transform:translate(-730px,60px);
+        }
+        .songs{
+            float: left;
+            transform: translate(-500px,50px);
+        }
+        .songs p{
+            text-align: center;
+        }
+        .songs .scolor{
+            font-size: 20px;
+            color:orange;
+        }
+        #picture{ 
+            height:250px;
+            width:250px;
+            position:absolute; 
+            animation:picture 10s linear infinite;
+            border-radius:50%;
+        }
+        @keyframes picture{
+            0%{
+                transform: translate(-100px,-50px) rotate(0deg);
+            }
+            50%{
+                transform: translate(-100px,-50px) rotate(180deg);
+            }
+            100%{
+                transform: translate(-100px,-50px) rotate(360deg);
+            }
+        }
+        .player{
+            float:left;
+        }
+        .player .broadcast{
+            background:url(./images/ft4wYB2sBrTzcGpwteSquz.jpg);
+            background-position: -162px -88px;
+            width: 40px;
+            height: 40px;
+            transform: translate(-150px,250px);
+            border-radius:50%;
+        }
+        .player #prograssBar .prograssBar{
+            background:gray;
+            width:280px;
+            height:6px;
+            transform: translate(-100px,228px);
+        }
+        .player #prograssBar .prograssBtn{
+            background:orange;
+            width:10px;
+            height:10px;
+            border-radius: 50%;
+            transform: translate(-100px,220px);
+        }
+        .player .time p{
+            color:gray;
+            transform: translate(200px,167px);
+        }
+        .player .volume{
+            background:url(./images/ft4wYB2sBrTzcGpwteSquz.jpg);
+            background-position: -70px 88px;
+            width:20px;
+            height:20px;
+            transform: translate(265px,133px);
+        }
+        .total{
+            position: absolute;
+            float:right;
+            top:400px;
+            left:1050px;
+        }
+        .download{
+            float:left;
+            background:url(./images/ft4wYB2sBrTzcGpwteSquz.jpg);
+            background-position: 0 -40px;
+            height:48px;
+            width:200px;
+            transform: translate(-60px,180px);
+        }
+        .download .pic{
+            float: left;
+            background:url(./images/ft4wYB2sBrTzcGpwteSquz.jpg);
+            background-position: 0 -90px;
+            height:18px;
+            width:19px;
+            transform: translate(30px,20px);
+        }
+        .download ul{
+            list-style-type: none;
+        }
+        .download ul li p{
+            text-align: center;
+        }
+        .download ul li p a{
+            color:black;
+            text-decoration: none;
+        }
+        .download ul li p a:hover{
+            color:orange;
+        }
+        .barrage{
+            float:left;
+            width:0px;
+            height:0px;
+        }
+        .clear:after {
+            content:"";
+            display:block; 
+            clear:both;
+        }
+        .barrage .bubble{
+            background:url(./images/fDRw8gm9XazHuqiccYQiyb.jpg);
+            width:60px;
+            height:60px;
+            transform: translate(-350px,270px);
+        }
+        .barrage .triangle{
+            height:0;
+            width:0;
+            overflow: hidden;
+            font-size: 0;
+            line-height: 0;
+            border-color:gray transparent transparent transparent;
+            border-style:solid dashed dashed dashed;
+            border-width:20px;
+            transform: translate(-300px,220px) rotate(90deg);
+        }
+        .barrage .rectangle{
+            background:gray;
+            height:60px;
+            width:250px;
+            transform: translate(-270px,150px);
+            border-radius: 10px;
+        }
+        .barrage .rectangle .first{
+            color:rgb(228, 225, 225);
+        }
+        .barrage .rectangle .second{
+            color:purple;
+        }
+        .barrage .rectangle p:hover{
+            color:red;
+        }
+        .barrage .rectangle p a{
+            text-decoration: none;
+        }
+        .barrage .rectangle p a:hover{
+            color:orange
+        }
+        .commentArea p{
+            font-size:15px;
+            color:gray;
+            position: absolute;
+            top:900px;
+            left:100px;
+        }
+        .commentArea .HR2{
+            width:1000px;
+            position: absolute;
+            top:950px;
+            left:60px;
+        }
+        .sculpture img{
+            width:60px;
+            height:60px;
+            position: absolute;
+            top:1000px;
+            left:100px;
+        }
+        .commentArea textarea{
+            width:800px;
+            height:200px;
+            position: absolute;
+            top:1000px;
+            left:180px;
+            border: 1px #d1d1d1 solid;
+	        border-radius: 5px;
+            resize: none;
+	        outline: none;
+        }
+        .commentArea #text{
+            position: absolute;
+            top:1220px;
+            left:800px;
+        }
+        .commentArea #postBt{
+            position: absolute;
+            top:1232px;
+            left:900px;
+            width:80px;
+            height:25px;
+            background-color:orange;
+            color:white;
+            border:1px gray;
+        }
+        #perfectComment{
+            position: absolute;
+            top:1300px;
+            left:80px;
+        }
+        .HR3{
+            width:1000px;
+            position: absolute;
+            top:1330px;
+            left:60px;
+        }
+        #comment {
+            position: absolute;
+            top:1350px;
+            left:100px;
+            overflow: hidden;
+        }
+
+        #comment p {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        #comment p:nth-child(odd) {
+            border: 1px solid #e3e197;
+            background: #ffd;
+            height:50px;
+        }
+
+        #comment p:nth-child(even) {
+            border: 1px solid #adcd3c;
+            background: #f2fddb;
+            height:50px;
+        }
+
+        #comment p span {
+            display: inline;
+            float: left;
+        }
+
+        #comment p .msg {
+            width: 738px;
+        }
+
+        #comment p .datetime {
+            width: 200px;
+            color: #999;
+            text-align: right;
+        }
+        .paging{
+            position:absolute;
+            top:1700px;
+            left:500px;
+        }
+        .paging ul{
+            list-style-type: none;
+        }
+        .paging ul div{
+            float:left;
+            padding:15px 15px;
+            background:rgb(236, 231, 231);
+            width:15px;
+            height:15px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        .paging ul div li a{
+            color:black;
+            text-decoration: none;
+            margin:0 auto;
+        }
+        .paging ul li a:hover{
+            color:orange;
+        }
+    </style>
+</head>
+<body>
+    <div class = "nav">
+        <div class = "sign">
+            <img src = "images/EBbGwpYnuxzNj2n4pu4QWG.jpg">
+        </div>
+        <div class = "nav1">
+            <ul>
+                <li><a href = "#" class = "ocolor">首页</a></li>
+                <li><a href = "#">榜单</a></li>
+                <li><a href = "#">歌手</a></li>
+                <li><a href = "#">下载酷我客户端</a></li>
+            </ul>
+        </div>
+        <div class = "nav2">
+            <ul>
+                <li><a href = "#"><div></div>美女秀</a></li>
+                <li><a href = "#"><div></div>酷我耳机</a></li>
+                <li><a href = "#"><div></div>VIP会员</a></li>
+                <li><a href = "#"><div></div>i听</a></li>
+            </ul>
+        </div>
+        <div class = "nav3">
+            <ul>
+                <li><a href = "#">更多服务</a></li>
+                <li><a href = "#">登录</a></li>
+                <li><a href = "#">^</a></li>
+            </ul>
+        </div>
+        <div class = "search">
+            <img src = "images/hRzX3n2eFHEyPd93FriVox.png">
+        </div>
+    </div>
+    <div class = "lyric">
+        <h1>喜羊羊</h1>
+        <ul>
+            <p>专辑:<li><a href = "#">儿歌大全</a></li></p>
+            <p>歌手:<li><a href = "#">华语群星</a></li></p>
+            <p><li><a href = "#" class = "special">分享</a></li></p>
+            <li><a href = "#"><div></div>评论</a></li>
+        </ul>
+    </div>
+    <div class = "annotation">
+        <p>上传时间：2015-10-02&nbsp歌曲来源：民大相思湖网球社</p>
+    </div>
+    <hr class = "HR1">
+    <div class = "songs">
+        <p>白云因为我变的柔软</p>
+        <p>别看我只是一只羊</p>
+        <p>羊儿的聪明难以想象</p>
+        <p>天再高心情一样奔放</p>
+        <p>每天都追赶太阳</p>
+        <p class = "scolor">有什么难题&nbsp去牵绊我&nbsp都不会去心伤</p>
+        <p>有什么危险&nbsp在我面前&nbsp也不会去慌乱</p>
+        <p>就算有狼群&nbsp把我追捕&nbsp也会当成游戏一场</p>
+        <p>在什么时间&nbsp都爱开心&nbsp笑容都会飞翔</p>
+        <p>就算会摔倒&nbsp站了起来&nbsp永远不会沮丧</p>
+        <p>在所有天气&nbsp拥有叫人&nbsp大笑的力量</p>
+        <p>虽然我只是羊</p>
+    </div>
+    <div class>
+        <img src = "./images/nJA5uhS7NxNWUhVyAzNN5q.jpg" id = "picture">
+    </div>
+    <div class = "player">
+        <audio autoplay="autoplay" id="mymusic">
+            <source src="./music.mp3" type="audio/mp3">
+        </audio>
+        <div class = "broadcast" id = "play"></div>
+        <div id = "prograssBar">
+            <div id="wp_bufBar">
+                <div class = "prograssBar" id="wp_processBar"></div>
+                <div class = "prograssBtn" id="wp_processBtn"></div>
+            </div>s
+        </div>
+        <div class = "time">
+            <p class = "wp_time" id ="timings">00:00</p>
+        </div>
+        <div class = "volume" id = "sound"></div>
+    </div>
+    <div class = "total">
+        <div class = "download">
+            <div class = "pic"></div>
+            <ul><li><p><a href = "#">免费下载这首歌</a></p></li></ul>
+        </div>
+        <div class = "barrage">
+            <div class = "bubble"></div>
+            <div class = "triangle"></div>
+            <div class = "rectangle">
+                <p class = "first">郭子仪——h5班</p>
+                <p class = "second">喜羊羊与灰太狼&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href ="#">去现场><div></div></a></p>
+            </div>
+        </div>
+    </div>
+    <div class = "commentArea">
+        <p>评论&nbsp&nbsp&nbsp&nbsp1703条评论</p>
+        <hr class = "HR2">
+        <div class = "sculpture">
+            <img src = "images/fDRw8gm9XazHuqiccYQiyb.jpg">
+        </div>
+        <div id = "post">
+            <textarea class="transition"></textarea>
+            <input id="postBt" type="button" value="评论"/>
+        </div>
+        <p id ="text">已输入0个字</p>
+    </div>
+    <p id = "perfectComment">精彩评论</p>
+    <hr class = "HR3">
+    <div id="comment"></div>
+    <div class = "paging">
+        <ul>
+            <div><li><a href = "#"><</a></li></div>
+            <div><li><a href = "#">1</a></li></div>
+            <div><li><a href = "#">2</a></li></div>
+            <div><li><a href = "#">3</a></li></div>
+            <div><li><a href = "#">……</a></li></div>
+            <div><li><a href = "#">></a></li></div>
+        </ul>
+    </div>
+</body>
+<script>
+    var playOff = true;
+    var volume =true;
+    var timing;
+    var allTime;
+
+    var play = document.getElementById("play");
+    var wp_playBtn = document.getElementById("wp_playBtn");
+    var prograssBtn = document.getElementsByClassName("prograssBtn");
+    var sound = document.getElementById("sound");
+    var timings = document.getElementById("timings");
+    var mymusic = document.getElementById("mymusic");
+
+    play.onclick = function(){
+      if(playOff){
+        mymusic.play();
+        musicTime();
+        playOff = false;
+        this.style.backgroundPositionX = '-207px';
+        this.style.backgroundPositionY = '-48px';
+        timing = setInterval(ProgressTime,1000);
+        allTime = mymusic.duration;
+      }
+      else{
+        mymusic.pause();
+        playOff = true;
+        this.style.backgroundPositionX = '-162px';
+        this.style.backgroundPositionY = '-88px';
+        clearInterval(timing)
+      }
+    }
+    sound.onclick = function(){
+      if(volume){
+        mymusic.muted = true;
+        volume = false;
+        this.style.backgroundPositionX="-45px";
+        this.style.backgroundPositionY="88px"
+      }
+      else{
+        mymusic.muted = false;
+        volume = true;
+        this.style.backgroundPositionX="-70px";
+        this.style.backgroundPositionY="88px"
+      }
+    }
+    function ProgressTime(){
+      var m = mymusic.currentTime/allTime;
+      prograssBtn[0].style.marginLeft = m * 280 + 'px';
+      wp_bufBar.style.width = m * 280 + 'px';
+    }
+    
+    function musicTime(){
+        timer = setInterval(function(){
+            var current = parseInt(mymusic.currentTime);
+            var minute = parseInt(current/60);
+            if(minute<10){
+                if(current%60<10){
+                    timings.innerHTML ="0"+ minute+":0"+current%60+" ";
+                }
+                else{
+                    timings.innerHTML ="0"+minute+":"+current%60+" ";
+                }
+            }
+            else{
+                if(current%60<10){
+                    timings.innerText = minute+":0"+current%60+" ";
+                }
+                else{
+                    timings.innerText = minute+":"+current%60+" ";
+                }
+            }
+        },1000)
+    }
+    var Storage =
+         {
+             saveData:function()
+             {
+                 var data = document.querySelector("#post textarea");
+                 if(data.value != "")
+                 {
+                     var time = new Date().getTime() + Math.random() * 5;
+                    localStorage.setItem(time, data.value + "|" + this.getDateTime());
+                     data.value = "";
+                     this.writeData();
+                 }
+                 else
+                 {
+                     alert("评论不能为空");
+                 }
+             },
+             writeData:function()
+             {
+                 var dataHtml = "", data = "";
+                 for(var i = localStorage.length-1; i >= 0; i--)//效率更高的循环方法
+                 {
+                     data = localStorage.getItem(localStorage.key(i)).split("|");
+                     dataHtml += "<p><span class=\"msg\">" + data[0] + "</span><span class=\"datetime\">" + data[1] + "</span></p>";
+                 }
+                 document.getElementById("comment").innerHTML = dataHtml;
+             },
+             getDateTime:function()
+             {
+                 var isZero = function(num)
+                 {
+                     if(num < 10)
+                     {
+                         num = "0" + num;
+                     }
+                     return num;
+                 }
+                 
+                 var d = new Date();
+                 return d.getFullYear() + "-" + isZero(d.getMonth() + 1) + "-" + isZero(d.getDate()) + " " + isZero(d.getHours()) + ":" + isZero(d.getMinutes()) + ":" + isZero(d.getSeconds());
+             }            
+         }
+         
+         window.onload = function()
+         {
+             Storage.writeData();
+             document.getElementById("postBt").onclick = function(){Storage.saveData();}
+         }
+</script>
+</html>
